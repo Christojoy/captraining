@@ -1,0 +1,38 @@
+{
+  "name": "captraining",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap/cds": "^8",
+    "@sap/hana-client": "^2.24.24",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.9.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8",
+    "@sap/hdi-deploy": "4.9.5"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "auth": "xsuaa",
+      "db": "hana",
+      "connectivity": true,
+      "destinations": true
+    },
+    "sql": {
+      "native_hana_associations": false
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+###
+GET http://localhost:4004/odata/v4/customer/Customers
+
+###
+POST http://localhost:4004/odata/v4/customer/Customers
+Content-Type: application/json
+
+{
+    "Id" : "022",
+    "Name" : "Karthik"
+}
+
+###
+PATCH http://localhost:4004/odata/v4/customer/Customers/003
+Content-Type: application/json
+
+{
+    "Name" : "Danerys"
+}
+
+###
+
+POST http://localhost:4004/odata/v4/book-shop/BookDetail
+Content-Type: application/json
+
+{
+    "Book_Id" : "201"
+}
