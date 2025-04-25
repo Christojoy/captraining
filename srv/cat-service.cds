@@ -19,9 +19,9 @@ service BookShop {
             Genre:String;
 
     }
-//     view FilteredOrdersAssoc as select {*, author.name} as Flatten
-// from (
-//   select from Books {*}
-//   where ID=$now
-// );
+    view FilteredOrdersAssoc as select {*, author.name} as Flatten
+from (
+  select from Books {*}
+  where ID=$now
+);
 }
