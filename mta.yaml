@@ -28,6 +28,9 @@ modules:
       - name: captraining-db
       - name: captraining-connectivity
       - name: captraining-destination
+      - name: chris-autoscaler
+        parameters:
+          path: ./autoscaler.json
 
   - name: captraining-db-deployer
     type: hdb
@@ -84,3 +87,8 @@ resources:
     parameters:
       service: destination
       service-plan: lite
+  - name: chris-autoscaler
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: autoscaler
+      service-plan: standard

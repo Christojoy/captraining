@@ -1,0 +1,58 @@
+
+{
+    "instance_min_count": 1,
+    "instance_max_count": 10,
+    "scaling_rules": [
+      {
+        "metric_type": "memory_utilization",
+        "statistic_type": "avg",
+        "operator": ">",
+        "threshold": 70,
+        "adjustment": "+1",
+        "cool_down_seconds": 60
+      },
+      {
+        "metric_type": "memory_utilization",
+        "statistic_type": "avg",
+        "operator": "<",
+        "threshold": 30,
+        "adjustment": "-1",
+        "cool_down_seconds": 60
+      },
+      {
+        "metric_type": "cpu_utilization",
+        "statistic_type": "avg",
+        "operator": ">",
+        "threshold": 75,
+        "adjustment": "+1",
+        "cool_down_seconds": 60
+      },
+      {
+        "metric_type": "cpu_utilization",
+        "statistic_type": "avg",
+        "operator": "<",
+        "threshold": 20,
+        "adjustment": "-1",
+        "cool_down_seconds": 60
+      }
+    ],
+    "schedules": {
+      "timezone": "UTC",
+      "recurring_schedule": [
+        {
+          "start_time": "00:00",
+          "end_time": "05:59",
+          "days_of_week": [1, 2, 3, 4, 5],
+          "instance_min_count": 1,
+          "instance_max_count": 3
+        },
+        {
+          "start_time": "06:00",
+          "end_time": "18:00",
+          "days_of_week": [1, 2, 3, 4, 5],
+          "instance_min_count": 3,
+          "instance_max_count": 10
+        }
+      ]
+    }
+  }
