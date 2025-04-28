@@ -12,7 +12,7 @@ entity Books : managed {
   @mandatory title  : String(111);
   descr  : String(1111);
   @mandatory author : Association to Authors;
-  // genre  : Association to Genres;
+  // genre  : Association to Genres
   stock  : Integer;
   price  : Decimal;
   currency : Currency;
