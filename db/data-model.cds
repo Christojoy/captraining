@@ -33,5 +33,5 @@ entity Genres  {
   key ID   : Integer;
       name : String;
       parent   : Integer;
-  // children : Composition of many Genres on children.parent = $self;
+  // children : Composition of many Genres on children.parent = $self
 }
