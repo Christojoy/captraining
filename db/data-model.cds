@@ -16,6 +16,7 @@ entity Books : managed {
   stock  : Integer;
   price  : Decimal;
   currency : Currency;
+  
 }
 
 entity Authors : managed {
@@ -25,7 +26,7 @@ entity Authors : managed {
   dateOfDeath  : Date;
   placeOfBirth : String;
   placeOfDeath : String;
-  // books  : Association to many Books on books.author = $self
+  books  : Association to many Books on books.author = $self
 }
 
 /** Hierarchically organized Code List for Genres */
