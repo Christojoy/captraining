@@ -36,6 +36,27 @@
         "NODE_ENV": "development",
         "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/captraining\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
       }
+    },
+    {
+      "name": "Run captraining-2",
+      "request": "launch",
+      "type": "node",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "cds",
+      "args": [
+        "serve",
+        "--in-memory?"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "envFile": "${workspaceFolder}/.env2",
+      "env": {
+        "NODE_ENV": "development",
+        "run.config": "{\"handlerId\":\"cap_run_config_handler_id\",\"runnableId\":\"{\\\"projectPath\\\":\\\"/home/user/projects/captraining\\\",\\\"profileName\\\":\\\"development\\\"}\"}"
+      }
     }
   ]
 }

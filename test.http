@@ -1,3 +1,6 @@
+T
+@Baseurl = http://localhost:4004
+
 ###
 GET http://localhost:4004/odata/v4/customer/Customers
 
@@ -20,7 +23,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:4004/odata/v4/book-shop/BookDetail
+POST {{Baseurl}}/Store/BookDetail
 Content-Type: application/json
 
 {

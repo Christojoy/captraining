@@ -6,8 +6,9 @@ service Customer {
 
 }
 
-service BookShop {
-    entity Books as projection on db.Books;
+service BookShop  @(path: '/BooksShop'){
+    @odata.draft.enabled
+    entity Books as projection on db.Books ;
     entity Authors as projection on db.Authors;
     entity Genres as projection on db.Genres;
 
