@@ -1,0 +1,1 @@
+using Customer as service from '../../srv/cat-service';
