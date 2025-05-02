@@ -1,6 +1,20 @@
 {
-  "scopes": [],
-  "attributes": [],
-  "role-templates": [],
-  "authorities-inheritance": false
+  "xsappname": "captraining",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin scope",
+      "grant-as-authority-to-apps": []
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Admin",
+      "description": "Administrator role",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ]
 }

@@ -69,9 +69,6 @@ resources:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
-      config:
-        xsappname: captraining-${org}-${space}
-        tenant-mode: dedicated
   - name: captraining-db
     type: com.sap.xs.hdi-container
     parameters:
